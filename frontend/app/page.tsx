@@ -50,8 +50,8 @@ export default function Home() {
       const data = await extractCrmRecords(rows);
       setResult(data);
       setStage("result");
-    } catch (err: any) {
-      setError(err.message || "Something went wrong during import.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong during import.");
       setStage("preview");
     }
   }, [rows]);

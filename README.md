@@ -17,3 +17,33 @@ No database. Everything is processed in-memory per request.
    re-validates every field in code (enum values, date parseability, the
    email/mobile skip rule) before returning imported vs. skipped records.
 
+## Setup
+
+### Backend
+
+```bash
+cd backend
+npm install
+cp .env.example .env
+# edit .env: add your free OpenRouter key from https://openrouter.ai/keys
+npm run dev
+```
+
+Runs on `http://localhost:4000`.
+
+Get a key at https://openrouter.ai/keys (free tier, no card required for
+the `:free` model variants). Check https://openrouter.ai/models and filter
+by "Free" — the exact free model IDs available change over time, so update
+`OPENROUTER_MODEL` in `.env` if the default in `.env.example` has been
+retired.
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+cp .env.local.example .env.local
+npm run dev
+```
+
+Runs on `http://localhost:3000`.

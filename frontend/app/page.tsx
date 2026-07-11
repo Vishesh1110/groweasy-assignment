@@ -79,13 +79,13 @@ export default function Home() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-10">
-      <header className="mb-10 flex flex-col gap-6 border-b border-line pb-6 sm:flex-row sm:items-end sm:justify-between">
+      <header className="mb-10 flex flex-col items-center gap-6 border-b border-line pb-8 text-center">
         <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-accent">GrowEasy</p>
-          <h1 className="font-display text-3xl font-bold text-slate-50 sm:text-4xl">CSV Importer</h1>
-          <p className="mt-2 max-w-lg text-sm text-mute">
-            Any layout in, clean CRM records out. Upload a lead export — Facebook, Google Ads,
-            Excel, or another CRM — and the mapper figures out where every field belongs.
+          <h1 className="font-display text-3xl font-bold text-slate-50 sm:text-4xl">
+            <span className="text-accent">GrowEasy</span> CSV Importer
+          </h1>
+          <p className="mx-auto mt-2 max-w-lg text-sm text-mute">
+            Any layout in, clean CRM records out. Upload a lead export and the mapper figures out where every field belongs.
           </p>
         </div>
         <StepIndicator current={step} />

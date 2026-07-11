@@ -4,7 +4,7 @@ const STEPS = ["Upload", "Preview", "Confirm", "Result"] as const;
 
 export default function StepIndicator({ current }: { current: number }) {
   return (
-    <ol className="flex items-center gap-0 font-mono text-xs uppercase tracking-wide">
+    <ol className="flex flex-wrap items-center justify-center gap-y-2 gap-x-0 font-mono text-xs uppercase tracking-wide">
       {STEPS.map((label, i) => {
         const step = i + 1;
         const state = step < current ? "done" : step === current ? "active" : "pending";
